@@ -21,9 +21,6 @@ import Contact          from './pages/Contact';
 import NotFound         from './pages/NotFound';
 import './styles/globals.css';
 
-// Pages that don't use the standard layout (no footer padding)
-const AUTH_PATHS = ['/login','/signup'];
-
 function Layout({ children }) {
   return (
     <>
@@ -70,4 +67,3 @@ export default function App() {
     </AuthProvider>
   );
 }
-
