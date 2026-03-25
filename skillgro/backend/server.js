@@ -4,10 +4,12 @@ const cors = require('cors');
 const morgan = require('morgan');
 const dotenv = require('dotenv');
 const path = require('path');
-
 dotenv.config();
 
 const app = express();
+
+// ── Disable ETag so API responses are never served as 304 from cache ──
+app.set('etag', false);
 
 // ── Middleware ──
 app.use(cors({ origin: process.env.CLIENT_URL || 'http://localhost:3000', credentials: true }));
@@ -57,4 +59,3 @@ mongoose
   });
 
 module.exports = app;
-
