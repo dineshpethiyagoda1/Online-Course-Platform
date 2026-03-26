@@ -1,1 +1,29 @@
+.section { padding: 60px 48px; }
+.filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 40px; }
+.filterBtn { font-size: 13px; font-weight: 500; padding: 8px 18px; border-radius: 100px; border: 1px solid var(--border2); background: none; color: var(--muted); cursor: none; transition: all 0.2s; }
+.filterBtn:hover { color: var(--text); border-color: var(--border2); background: rgba(255,255,255,0.05); }
+.filterActive { background: var(--lime); color: #0a0a0a; border-color: var(--lime); font-weight: 600; }
+
+.grid { display: flex; flex-direction: column; gap: 16px; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 28px; display: grid; grid-template-columns: 80px 1fr auto; gap: 28px; align-items: center; transition: all 0.3s; }
+.card:hover { border-color: var(--violet); transform: translateY(-4px); box-shadow: 0 24px 48px rgba(0,0,0,0.3); }
+
+.dateBadge { width: 72px; height: 72px; border-radius: 16px; background: linear-gradient(135deg, var(--violet), var(--pink)); display: flex; flex-direction: column; align-items: center; justify-content: center; flex-shrink: 0; }
+.dateMonth { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; color: rgba(255,255,255,0.7); text-transform: uppercase; }
+.dateDay { font-family: 'Fraunces', serif; font-weight: 700; font-size: 28px; color: #fff; line-height: 1; }
+
+.cardTop { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.emoji { font-size: 20px; }
+.category { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; background: rgba(255,255,255,0.06); border: 1px solid var(--border2); border-radius: 100px; padding: 3px 10px; color: var(--muted); }
+.badge { font-size: 10px; font-weight: 700; padding: 3px 10px; border-radius: 100px; background: rgba(200,255,0,0.15); color: var(--lime); border: 1px solid rgba(200,255,0,0.2); }
+
+.title { font-family: 'Fraunces', serif; font-weight: 700; font-size: 20px; letter-spacing: -0.02em; color: var(--text); margin-bottom: 8px; }
+.desc { font-size: 14px; color: var(--muted); line-height: 1.6; font-weight: 300; margin-bottom: 14px; }
+.meta { display: flex; gap: 20px; font-size: 13px; color: var(--muted2); flex-wrap: wrap; }
+
+.price { font-family: 'Fraunces', serif; font-weight: 700; font-size: 28px; color: var(--text); letter-spacing: -0.03em; text-align: right; margin-bottom: 12px; }
+.freeTag { color: var(--lime); font-size: 22px; }
+.regBtn { border-radius: 10px; padding: 11px 22px; font-size: 13px; }
+
+@media (max-width: 768px) { .card { grid-template-columns: 1fr; } .cardLeft, .cardRight { display: none; } }
 
