@@ -1,1 +1,48 @@
+.section { padding: 80px 48px; }
+.grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 48px; }
+.infoCol { display: flex; flex-direction: column; gap: 16px; }
+
+.infoCard { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 28px; transition: all 0.3s; position: relative; overflow: hidden; }
+.infoCard::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--lime); transform: scaleX(0); transition: transform 0.3s; }
+.infoCard:hover { border-color: var(--border2); transform: translateX(6px); }
+.infoCard:hover::after { transform: scaleX(1); }
+.infoIcon { width: 48px; height: 48px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 14px; }
+.infoLabel { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); margin-bottom: 6px; }
+.infoValue { font-family: 'Fraunces', serif; font-weight: 700; font-size: 18px; letter-spacing: -0.02em; color: var(--text); margin-bottom: 4px; }
+.infoSub { font-size: 13px; color: var(--muted); }
+
+.mapCard { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; position: relative; overflow: hidden; background: linear-gradient(135deg, #0d0d2b, #0a1020); }
+.mapGrid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px); background-size: 32px 32px; }
+.mapPin { font-size: 36px; filter: drop-shadow(0 0 20px rgba(200,255,0,0.5)); animation: bounce 2s ease-in-out infinite; position: relative; z-index: 1; }
+.mapAddr { font-size: 13px; color: var(--muted); text-align: center; position: relative; z-index: 1; }
+
+.formCard { background: var(--surface); border: 1px solid var(--border); border-radius: 24px; padding: 40px; }
+.formCardTitle { font-family: 'Fraunces', serif; font-weight: 700; font-size: 28px; letter-spacing: -0.03em; color: var(--text); margin-bottom: 6px; }
+.formCardTitle em { font-style: italic; color: var(--lime); }
+.formCardSub { font-size: 14px; color: var(--muted); margin-bottom: 32px; font-weight: 300; line-height: 1.6; }
+
+.formGroup { margin-bottom: 18px; }
+.pillRow { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+.pill { background: var(--bg2); border: 1px solid var(--border2); border-radius: 100px; padding: 6px 14px; font-size: 12px; color: var(--muted); cursor: none; transition: all 0.2s; }
+.pill:hover { color: var(--text); }
+.pillActive { background: rgba(200,255,0,0.08); border-color: rgba(200,255,0,0.3); color: var(--lime); }
+
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.submitBtn { width: 100%; background: var(--lime); color: #0a0a0a; border: none; border-radius: 12px; padding: 15px 20px; font-family: 'Outfit', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 0.04em; cursor: none; transition: all 0.25s; display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 8px; }
+.submitBtn:hover:not(:disabled) { box-shadow: 0 0 40px rgba(200,255,0,0.35); transform: translateY(-2px); }
+.submitBtn:disabled { opacity: 0.6; }
+.successMsg { background: rgba(200,255,0,0.08); border: 1px solid rgba(200,255,0,0.3); border-radius: 12px; padding: 20px; color: var(--lime); font-size: 15px; text-align: center; }
+
+/* FAQ */
+.faqSection { padding: 0 48px 80px; }
+.faqGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.faqItem { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+.faqOpen { border-color: rgba(200,255,0,0.2); }
+.faqQ { padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; cursor: none; gap: 16px; }
+.faqQText { font-size: 15px; font-weight: 600; color: var(--text); }
+.faqToggle { width: 28px; height: 28px; border-radius: 50%; background: var(--surface2); border: 1px solid var(--border2); display: flex; align-items: center; justify-content: center; font-size: 18px; color: var(--muted); transition: all 0.3s; flex-shrink: 0; }
+.faqOpen .faqToggle { background: var(--lime); color: #0a0a0a; border-color: var(--lime); }
+.faqA { padding: 0 24px 20px; font-size: 14px; color: var(--muted); line-height: 1.7; font-weight: 300; }
+
+@keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
 
