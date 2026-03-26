@@ -1,1 +1,98 @@
+.loading { display:flex; align-items:center; justify-content:center; min-height:60vh; color:var(--muted); font-size:18px; }
+
+.hero { background:var(--bg2); border-bottom:1px solid var(--border); position:relative; overflow:hidden; padding-top:72px; }
+.heroOrb { position:absolute; width:700px; height:700px; background:var(--violet); border-radius:50%; filter:blur(140px); opacity:0.12; top:-300px; right:-200px; }
+.heroInner { position:relative; z-index:2; padding:40px 48px 60px; }
+.heroContent { display:grid; grid-template-columns:380px 1fr; gap:56px; align-items:start; margin-top:28px; }
+
+.productVisual { background:var(--surface); border:1px solid var(--border); border-radius:28px; padding:64px; display:flex; flex-direction:column; align-items:center; justify-content:center; position:relative; min-height:320px; }
+.productEmoji { font-size:96px; line-height:1; text-align:center; }
+.heroBadge { position:absolute; top:20px; left:20px; background:var(--lime); color:#0a0a0a; border-radius:100px; padding:5px 14px; font-size:10px; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; }
+.digitalTag { position:absolute; bottom:20px; border:1px solid rgba(200,255,0,0.3); background:rgba(200,255,0,0.06); color:var(--lime); border-radius:100px; padding:4px 12px; font-size:11px; font-weight:600; }
+
+.heroInfo {}
+.heroCat { font-size:11px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); margin-bottom:12px; }
+.heroTitle { font-family:'Fraunces',serif; font-weight:700; font-size:clamp(34px,4vw,52px); letter-spacing:-0.04em; line-height:1.0; color:var(--text); margin-bottom:14px; }
+.heroDesc { font-size:15px; color:var(--muted); line-height:1.7; font-weight:300; margin-bottom:20px; }
+
+.ratingRow { display:flex; align-items:center; gap:8px; margin-bottom:16px; }
+.stars { color:#f0c040; font-size:16px; letter-spacing:2px; }
+.ratingNum { font-weight:700; color:var(--text); font-size:15px; }
+.reviewCount { font-size:13px; color:var(--muted); }
+
+.priceRow { display:flex; align-items:center; gap:12px; margin-bottom:24px; }
+.price { font-family:'Fraunces',serif; font-weight:700; font-size:44px; letter-spacing:-0.06em; color:var(--text); }
+.origPrice { font-size:22px; color:var(--muted); text-decoration:line-through; }
+.discBadge { background:rgba(200,255,0,0.12); border:1px solid rgba(200,255,0,0.3); color:var(--lime); border-radius:8px; padding:4px 10px; font-size:12px; font-weight:700; }
+
+.ctaRow { display:flex; align-items:center; gap:12px; margin-bottom:10px; }
+.qtyControl { display:flex; align-items:center; gap:0; border:1px solid var(--border2); border-radius:12px; overflow:hidden; }
+.qtyControl button { width:40px; height:48px; background:var(--surface2); border:none; color:var(--text); font-size:18px; cursor:none; transition:background 0.2s; }
+.qtyControl button:hover { background:var(--border2); }
+.qtyControl span { padding:0 20px; font-weight:600; color:var(--text); font-size:16px; }
+.addBtn { flex:1; padding:14px 28px; background:var(--lime); border:none; border-radius:12px; font-size:15px; font-weight:700; color:#0a0a0a; cursor:none; transition:all 0.2s; white-space:nowrap; }
+.addBtn:hover { opacity:0.9; transform:translateY(-2px); }
+.addBtnDone { background:rgba(200,255,0,0.15) !important; color:var(--lime) !important; border:1px solid rgba(200,255,0,0.3) !important; }
+.wishBtn { background:transparent; border:1px solid var(--border2); border-radius:12px; padding:12px 20px; font-size:14px; color:var(--muted); cursor:none; transition:all 0.2s; margin-bottom:20px; }
+.wishBtn:hover { border-color:var(--pink); color:var(--pink); }
+
+.quickIncludes { display:flex; flex-direction:column; gap:8px; padding-top:16px; border-top:1px solid var(--border); }
+.qiItem { display:flex; align-items:flex-start; gap:8px; font-size:13px; color:var(--muted); }
+.qiCheck { color:var(--lime); font-size:11px; flex-shrink:0; margin-top:2px; }
+
+/* TABS */
+.tabs { display:flex; gap:0; border-bottom:1px solid var(--border); padding:0 48px; background:var(--bg2); position:sticky; top:72px; z-index:100; }
+.tab { font-size:14px; font-weight:500; color:var(--muted); padding:18px 24px; border:none; background:none; cursor:none; transition:all 0.2s; border-bottom:2px solid transparent; }
+.tab:hover { color:var(--text); }
+.tabActive { color:var(--lime); border-bottom-color:var(--lime); }
+
+/* BODY */
+.body { padding:48px; }
+.bodyGrid { display:grid; grid-template-columns:1fr 300px; gap:28px; align-items:start; }
+
+.card { background:var(--surface); border:1px solid var(--border); border-radius:20px; padding:32px; }
+.cardTitle { font-family:'Fraunces',serif; font-weight:700; font-size:22px; letter-spacing:-0.03em; color:var(--text); margin-bottom:20px; }
+.bodyText { font-size:15px; color:var(--muted); line-height:1.8; font-weight:300; margin-bottom:16px; }
+
+.includesList { display:flex; flex-direction:column; gap:12px; }
+.includeItem { display:flex; align-items:flex-start; gap:14px; padding:14px; background:rgba(200,255,0,0.03); border:1px solid rgba(200,255,0,0.1); border-radius:12px; }
+.includeIcon { color:var(--lime); font-size:13px; font-weight:700; flex-shrink:0; margin-top:1px; }
+.includeItem span { font-size:14px; color:var(--text); }
+
+.specsTable { display:flex; flex-direction:column; gap:0; }
+.specRow { display:flex; justify-content:space-between; align-items:center; padding:14px 0; border-bottom:1px solid var(--border); }
+.specRow:last-child { border-bottom:none; }
+.specLabel { font-size:13px; color:var(--muted); }
+.specVal { font-size:14px; font-weight:600; color:var(--text); }
+
+.overallRating { display:flex; align-items:center; gap:20px; padding:20px; background:rgba(200,255,0,0.04); border:1px solid rgba(200,255,0,0.1); border-radius:14px; margin-bottom:24px; }
+.bigRating { font-family:'Fraunces',serif; font-weight:700; font-size:52px; letter-spacing:-0.06em; color:var(--lime); }
+.bigStars { color:#f0c040; font-size:22px; letter-spacing:3px; margin-bottom:4px; }
+
+.reviewsList { display:flex; flex-direction:column; gap:20px; }
+.reviewItem { display:grid; grid-template-columns:44px 1fr; gap:14px; align-items:start; padding-bottom:20px; border-bottom:1px solid var(--border); }
+.reviewItem:last-child { border-bottom:none; }
+.reviewAv { width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Fraunces',serif; font-weight:700; font-size:16px; color:#0a0a0a; }
+.reviewTop { display:flex; align-items:center; gap:10px; margin-bottom:6px; }
+.reviewName { font-size:14px; font-weight:600; color:var(--text); }
+.reviewStars { color:#f0c040; font-size:12px; }
+.reviewText { font-size:14px; color:var(--muted); line-height:1.7; font-weight:300; font-style:italic; }
+
+/* SIDE CARD */
+.sideCard { background:var(--surface); border:1px solid var(--border); border-radius:20px; padding:28px; position:sticky; top:140px; }
+.sidePrice { font-family:'Fraunces',serif; font-weight:700; font-size:40px; letter-spacing:-0.06em; color:var(--text); margin-bottom:4px; }
+.sideOrig { font-size:16px; color:var(--muted); text-decoration:line-through; margin-bottom:20px; display:flex; align-items:center; gap:8px; }
+.sideDisc { text-decoration:none; background:rgba(200,255,0,0.12); border:1px solid rgba(200,255,0,0.3); color:var(--lime); border-radius:6px; padding:2px 7px; font-size:11px; font-weight:700; }
+.sideBuy { width:100%; padding:14px; background:var(--lime); border:none; border-radius:12px; font-size:15px; font-weight:700; color:#0a0a0a; cursor:none; transition:all 0.2s; margin-bottom:20px; }
+.sideBuy:hover { opacity:0.9; }
+.sideIncludes { display:flex; flex-direction:column; gap:8px; padding-top:16px; border-top:1px solid var(--border); margin-bottom:16px; }
+.sideIncItem { display:flex; align-items:flex-start; gap:8px; font-size:12px; color:var(--muted); }
+.sideIncItem span { color:var(--lime); font-size:10px; flex-shrink:0; margin-top:2px; }
+.guarantee { display:flex; align-items:center; gap:12px; padding-top:16px; border-top:1px solid var(--border); }
+
+@media (max-width:1024px) {
+  .heroContent { grid-template-columns:1fr; }
+  .bodyGrid { grid-template-columns:1fr; }
+  .sideCard { position:static; }
+}
 
